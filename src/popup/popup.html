@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>墨译</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <header>
+      <div class="seal" aria-hidden="true">译</div>
+      <div class="title-block">
+        <h1>墨译</h1>
+        <p>全页翻译 · 划词翻译 · 网页总结</p>
+      </div>
+      <span id="dot" class="dot" title="连接状态"></span>
+    </header>
+
+    <section class="direction" aria-label="翻译方向">
+      <button type="button" data-direction="en-zh">英 → 中</button>
+      <button type="button" data-direction="zh-en">中 → 英</button>
+      <button type="button" data-direction="auto">自动</button>
+    </section>
+
+    <section class="actions">
+      <button id="translate" type="button" class="primary">翻译当前页面</button>
+      <button id="summarize" type="button">总结此页</button>
+      <button id="restore" type="button" class="ghost">恢复原文</button>
+    </section>
+
+    <form id="settingsForm">
+      <label>
+        Base URL
+        <input id="baseUrl" type="url" spellcheck="false" placeholder="https://api.deepseek.com" />
+      </label>
+      <label>
+        API Key
+        <span class="key-row">
+          <input id="apiKey" type="password" spellcheck="false" autocomplete="off" />
+          <button id="toggleKey" type="button">显示</button>
+        </span>
+      </label>
+      <label>
+        模型
+        <input id="model" type="text" spellcheck="false" placeholder="deepseek-flash" />
+      </label>
+      <p class="hint">兼容 OpenAI Chat Completions。DeepSeek V4.1 Flash 填 deepseek-flash。</p>
+      <div class="row">
+        <button id="save" type="submit" class="primary">保存设置</button>
+        <button id="test" type="button">测试连接</button>
+      </div>
+    </form>
+    <p id="status" role="status"></p>
+    <script src="popup.js"></script>
+  </body>
+</html>

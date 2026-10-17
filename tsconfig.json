@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "strict": true,
+    "noEmit": true,
+    "lib": ["ES2023", "DOM", "DOM.Iterable"],
+    "types": ["chrome"],
+    "skipLibCheck": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": false,
+    "useDefineForClassFields": true
+  },
+  "include": ["src"]
+}

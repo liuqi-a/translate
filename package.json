@@ -1,0 +1,15 @@
+{
+  "name": "moye-translate",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.ts",
+    "test": "node scripts/build.ts && node scripts/selfTest.ts"
+  },
+  "devDependencies": {
+    "@types/chrome": "^0.0.326",
+    "esbuild": "^0.25.10",
+    "typescript": "^5.9.3"
+  }
+}
